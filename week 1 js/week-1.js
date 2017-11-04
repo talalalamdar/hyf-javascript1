@@ -19,8 +19,8 @@ console.log("I'm awesome");
 space();
       //3
 
-var x = 10;
-console.log("The value of my variable x will be: 10");
+var x;
+console.log("The value of my variable x will be: undefined");
 console.log(x);
 var x = 5;
 console.log("The value of my variable x will be: 5");
@@ -99,7 +99,10 @@ console.log(typeof x3);
 console.log(typeof x4);
 if (typeof x1 !== typeof x2 && typeof x1 !== typeof x3 && typeof x1 !== typeof x4 && typeof x2 !== typeof x3 && typeof x2 !== typeof x4 && typeof x3 !== typeof x4 ){
     console.log("NONE OF THE VARIABLES ARE THE SAME TYPE");
-};
+} else { 
+  console.log("one of the variable is equal to another one")
+
+}
 
           
 space();
