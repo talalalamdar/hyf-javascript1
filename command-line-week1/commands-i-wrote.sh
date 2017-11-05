@@ -4,11 +4,8 @@ $touch blank.txt
 
   //2
 $echo "Hello, hello, hello, hello, hello" > greetings.txt
-$cp greetings.txt 1.txt
-$cp greetings.txt 2.txt
-$cp greetings.txt 3.txt
-$cp greetings.txt 4.txt
-$cp greetings.txt 5.txt
+$for i in {1..5};do cp greetings.txt $i.txt; done
+
 
   //3
 $echo "cat" > pets.txt
