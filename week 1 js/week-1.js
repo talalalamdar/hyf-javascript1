@@ -127,9 +127,9 @@ if (6/0 === 10/0) {
    console.log("is 6/0 === 10/0  "+true);
    console.log("they are equal")
 } else {
-    console.log(false)
+    console.log("They are not equal")
 }
 
-
+he
 
  space();
