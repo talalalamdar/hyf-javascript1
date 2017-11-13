@@ -64,9 +64,9 @@ space();
 //Q6
 
 let vehicle = function(color,code,age) {
-    if (age <= 2) {
+    if (age <= 4) {
         age = "new";
-    }else {
+    }else if (age >= 5) {
         age = "old";
     }
     if (code === 1) {
