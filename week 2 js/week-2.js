@@ -1,4 +1,4 @@
-var space = function(){
+let space = function(){
     console.log("");
     console.log("=======================================");
     console.log("");
@@ -6,32 +6,32 @@ var space = function(){
 space();
 //Q1
 
-var sum = function(a,b,c) {
-    console.log (a+b+c);
+let sum = function(a,b,c) {
+    return a + b + c;
 }
-sum(4,6,8);
-sum(941,36,234);
+console.log(sum(4,6,8));
+console.log(sum(941,36,234));
 
 
 space();
 //Q2
 
-var colorCar = function(color) {
-    console.log('a ' + color +' car');
+let colorCar = function(color) {
+    return 'a ' + color +' car';
     
 }
-colorCar("red");
-colorCar('green');
+console.log(colorCar("red"));
+console.log(colorCar('green'));
 
 
 
 space();
 //Q3
 
-var object = {firstName: "Matt", lastName: "Doe", age: 26};
+let object = {firstName: "Matt", lastName: "Doe", age: 26};
 function id() {
-    for (var prop in object) {
-        console.log(prop + ': ' + object[prop]);
+    for (let prop in object) {
+        return prop + ': ' + object[prop];
     }
 }
 id();
@@ -41,14 +41,15 @@ space();
 //Q4
 
 let vehicleType = function(color,code) {
+    let type;
     if (code === 1) {
-        code = "car";
+        type = "car";
     }else if (code === 2) {
-        code = "motorbike";
+        type = "motorbike";
     }else {
         console.log("the code is wrong")
     };
-    console.log('a ' + color + ' ' + code)
+    console.log('a ' + color + ' ' + type)
     }
 vehicleType('blue',2);
 vehicleType('red',1);
@@ -57,7 +58,7 @@ vehicleType('red',1);
 space();
 //Q5
 
-console.log(3==3);
+console.log(3 === 3);
 
 
 space();
@@ -113,7 +114,7 @@ space();
     }else {
         console.log("the code is wrong");
     }
-   console.log('a ' + color + ' ' + age + " " + code);
+   console.log( color + ' ' + age + " " + code);
 }
 newVehicle("green",3,1);
 newVehicle("brown",1,5);
@@ -124,7 +125,7 @@ space();
 //Q10
 
 function advertisement() {
-    let u = vehicles.pop();   
+    let lastItem = vehicles.pop();   
     for (let i = 0;i < vehicles.length; i++) {
         console.log("Amazing Joe's Garage, we service " + vehicles.join(", ") + " and " + u) ;
         break;
