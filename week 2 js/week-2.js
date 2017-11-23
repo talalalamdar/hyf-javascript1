@@ -1,24 +1,24 @@
-let space = function(){
+let space = function () {
     console.log("");
     console.log("=======================================");
     console.log("");
-}   
+}
 space();
 //Q1
 
-let sum = function(a,b,c) {
+let sum = function (a, b, c) {
     return a + b + c;
 }
-console.log(sum(4,6,8));
-console.log(sum(941,36,234));
+console.log(sum(4, 6, 8));
+console.log(sum(941, 36, 234));
 
 
 space();
 //Q2
 
-let colorCar = function(color) {
-    return 'a ' + color +' car';
-    
+let colorCar = function (color) {
+    return 'a ' + color + ' car';
+
 }
 console.log(colorCar("red"));
 console.log(colorCar('green'));
@@ -28,10 +28,10 @@ console.log(colorCar('green'));
 space();
 //Q3
 
-let object = {firstName: "Matt", lastName: "Doe", age: 26};
+let object = { firstName: "Matt", lastName: "Doe", age: 26 };
 function id() {
     for (let prop in object) {
-        return prop + ': ' + object[prop];
+        console.log(prop + ': ' + object[prop]);
     }
 }
 id();
@@ -40,19 +40,19 @@ id();
 space();
 //Q4
 
-let vehicleType = function(color,code) {
+let vehicleType = function (color, code) {
     let type;
     if (code === 1) {
         type = "car";
-    }else if (code === 2) {
+    } else if (code === 2) {
         type = "motorbike";
-    }else {
-        console.log("the code is wrong")
+    } else {
+        return "the code is wrong";
     };
-    console.log('a ' + color + ' ' + type)
-    }
-vehicleType('blue',2);
-vehicleType('red',1);
+    return 'a ' + color + ' ' + type;
+}
+console.log(vehicleType('blue', 2));
+console.log(vehicleType('red', 1));
 
 
 space();
@@ -64,60 +64,57 @@ console.log(3 === 3);
 space();
 //Q6
 
-let vehicle = function(color,code,age) {
-    if (age <= 4) {
+let vehicle = function (color, code, age) {
+    if (age <= 2) {
         age = "new";
-    }else if (age >= 5) {
-        age = "old";
+    } else {
+        age = "used";
     }
+    let type;
     if (code === 1) {
-        code = "car";
-    }else if (code === 2) {
-        code = "motorbike";
+        type = "car";
+    } else if (code === 2) {
+        type = "motorbike";
     }
-   console.log('a ' + color + ' ' + age + " " + code);
+    return 'a ' + color + ' ' + age + " " + type;
 };
-vehicle("blue",2,1);
-vehicle("red",1,5);
+console.log(vehicle("blue", 2, 1));
+console.log(vehicle("red", 1, 5));
 
 
 
 space();
 //Q7 
 
-var vehicles = ['cars', 'motorbikes', 'caravans', 'motors'];
-console.log(vehicles.join(" "))
+let vehicles = ['cars', 'motorbikes', 'caravans', 'motors'];
+console.log(vehicles.join(", "))
 
 space();
 //Q8
+
 console.log(vehicles[2]);
 
 
 space();
- //Q9 
- 
+//Q9 
 
- let newVehicle = function(color,code,age) {
+let newVehicle = function (color, code, age) {
+    let condition;
     if (age <= 2) {
-        age = "new";
-    }else {
-        age = "old";
+        condition = "new";
+    } else {
+        condition = "used";
     }
-    if (code === 1) {
-        code = vehicles[0];
-    }else if (code === 2) {
-        code = vehicles[1];
-    }else if (code === 3) {
-        code = vehicles[2];
-    }else if (code === 4) {
-        code = vehicles[3];
-    }else {
-        console.log("the code is wrong");
+    let type;
+    if (code >= 1 && code < vehicles.length) {
+        type = vehicles[code - 1];
+    } else {
+       return "the code is wrong";
     }
-   console.log( color + ' ' + age + " " + code);
+    return  color + ' ' + condition + " " + type;
 }
-newVehicle("green",3,1);
-newVehicle("brown",1,5);
+console.log(newVehicle("green", 3, 1));
+console.log(newVehicle("brown", 1, 5));
 
 
 
@@ -125,9 +122,9 @@ space();
 //Q10
 
 function advertisement() {
-    let lastItem = vehicles.pop();   
-    for (let i = 0;i < vehicles.length; i++) {
-        console.log("Amazing Joe's Garage, we service " + vehicles.join(", ") + " and " + u) ;
+    let u = vehicles.pop();
+    for (let i = 0; i < vehicles.length; i++) {
+        console.log("Amazing Joe's Garage, we service " + vehicles.join(", ") + " and " + u + ".");
         break;
     }
 }
@@ -153,9 +150,9 @@ console.log(emptyObject);
 space();
 //Q13
 
-let teachers = [ {name: "Philip ,Ivona"}, {name: "Jim"}, {name:  "Unmesh"}, {name: "Frank"} ] ;
+let teachers = [{ name: "Philip ,Ivona" }, { name: "Jim" }, { name: "Unmesh" }, { name: "Frank" }];
 function teachersList() {
-    for (var i = 0; i < teachers.length; i++) {
+    for (let i = 0; i < teachers.length; i++) {
         console.log(teachers[i])
     }
 }
@@ -174,20 +171,20 @@ teachersList();
 space();
 //Q15
 
-function foo(a){
-    bar();
+function foo(a) {
+    return a();
 }
 function bar() {
     console.log("Hello, I am bar");
 }
-foo(bar);
+console.log(foo(bar));
 
 
 space();
 //Q16
 
-let x = [1,2,3];
-let y = [1,2,3];
+let x = [1, 2, 3];
+let y = [1, 2, 3];
 let z = y;
 console.log(x == y);
 console.log(x === y);
@@ -213,7 +210,7 @@ space();
 
 let t = 42;
 console.log(typeof t);
-console.log(typeof typeof t);  
+console.log(typeof typeof t);
 
 
 space();
