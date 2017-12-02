@@ -36,12 +36,17 @@ img:hover {
     animation: shake 0.5s; 
     animation-iteration-count: infinite; 
 }
+<<<<<<< HEAD
 ul {
     list-style-type: none;
     text-align: left;
 }
 li {
     
+=======
+li {
+    line-height: 1.5em;
+>>>>>>> 7a8bb121435b0b8180dbac0d65a5f68fbf5258ac
     padding:5px;
     margin-bottom : 20px;
 }

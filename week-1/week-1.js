@@ -127,9 +127,18 @@ if (6/0 === 10/0) {
    console.log("is 6/0 === 10/0  "+true);
    console.log("they are equal")
 } else {
+<<<<<<< HEAD
     console.log("they are not equal")
 }
 
 
 
  space();
+=======
+    console.log("They are not equal")
+}
+
+he
+
+ space();
+>>>>>>> 7a8bb121435b0b8180dbac0d65a5f68fbf5258ac

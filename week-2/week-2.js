@@ -213,4 +213,8 @@ console.log(typeof t);
 console.log(typeof typeof t);
 
 
+<<<<<<< HEAD
 space();
+=======
+space();
+>>>>>>> 7a8bb121435b0b8180dbac0d65a5f68fbf5258ac
