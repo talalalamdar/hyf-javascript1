@@ -28,10 +28,10 @@ console.log(colorCar('green'));
 space();
 //Q3
 
-let object = { firstName: "Matt", lastName: "Doe", age: 26 };
+let person = { firstName: "Matt", lastName: "Doe", age: 26 };
 function id() {
-    for (let prop in object) {
-        console.log(prop + ': ' + object[prop]);
+    for (let prop in person) {
+        console.log(prop + ': ' + person[prop]);
     }
 }
 id();
@@ -122,11 +122,8 @@ space();
 //Q10
 
 function advertisement() {
-    let u = vehicles.pop();
-    for (let i = 0; i < vehicles.length; i++) {
-        console.log("Amazing Joe's Garage, we service " + vehicles.join(", ") + " and " + u + ".");
-        break;
-    }
+    let lastService = vehicles.pop();
+    console.log("Amazing Joe's Garage, we service " + vehicles.join(", ") + " and " + lastService + ".");
 }
 advertisement();
 
@@ -213,8 +210,4 @@ console.log(typeof t);
 console.log(typeof typeof t);
 
 
-<<<<<<< HEAD
 space();
-=======
-space();
->>>>>>> 7a8bb121435b0b8180dbac0d65a5f68fbf5258ac
