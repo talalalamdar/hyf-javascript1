@@ -15,22 +15,6 @@ document.body.appendChild(header);
 header.innerHTML = "My Books List";
 header.setAttribute("class", "header");
 
-/* this function was for step 3 i changed it later
-function generator() {
-    for (let i = 0; i < favoriteBooks.length; i++) {
-        let title = favoriteBooks[i];
-        let ul = document.createElement("ul");
-        let li = document.createElement("li");
-        let li2 = document.createElement("li");
-        let li3 = document.createElement("li");
-        ul.appendChild(li);
-        ul.appendChild(li2);
-        ul.appendChild(li3);
-        ul.innerHTML = title;
-        document.body.appendChild(ul);
-    }
-}
-generator();*/
 
 let menu = {
     the_godfather: {
